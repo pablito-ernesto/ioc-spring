@@ -10,7 +10,7 @@ public class DebitCard {
     static final int MAX_AMOUNT = 10000;
     private static int balance = MAX_AMOUNT;
 
-    @Step("Set debit card balance as <amount> rupees")
+    @Step("Set debit card balance as <amount> dolars")
     public void setLimit(String amount) {
         try {
             balance = Integer.parseInt(amount);

@@ -9,8 +9,8 @@ public class PaypalDebitCardProcessor implements DebitCardProcessor {
     public Receipt charge(int amount) {
         if (DebitCard.hasBalance(amount)) {
             DebitCard.debit(amount);
-            return new Receipt(ReceiptStatus.SUCCESS, String.format("Successfully charged rupees %d through Paypal!\n", amount));
+            return new Receipt(ReceiptStatus.SUCCESS, String.format("Successfully charged dolars %d through Paypal!\n", amount));
         }
-        return new Receipt(ReceiptStatus.FAILURE, String.format("No balance to charge %d rupees\n", amount));
+        return new Receipt(ReceiptStatus.FAILURE, String.format("No balance to charge %d dolars\n", amount));
     }
 }
